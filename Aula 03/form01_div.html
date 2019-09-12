@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário de Contatos - Site de Exemplo</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/contatos.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header></header>
+    <nav></nav>
+    <main>
+
+<h2>Faça contato conosco</h2>
+<p>Preencha o formulário abaixo para entrar em contato conosco.</p>
+<p class="text-red text-center"><small>Todos os campos devem ser preenchidos.</small></p>
+
+<div id="mensagem-erro"></div>
+
+<form action="http://luferat.net/form.php" method="post" name="contatos" id="contatos">
+    <p>
+        <label for="contato_nome">Seu nome:</label>
+        <input type="text" name="contato_nome" id="contato_nome" placeholder="Seu nome completo.">
+    </p>
+    <p>
+        <label for="contato_email">Seu e-mail:</label>
+        <input type="text" name="contato_email" id="contato_email" placeholder="Seu endereço de e-mail.">
+    </p>
+    <p>
+        <label for="contato_assunto">Assunto:</label>
+        <input type="text" name="contato_assunto" id="contato_assunto" placeholder="Assunto do contato.">
+    </p>
+    <p>
+        <label for="contato_mensagem">Mensagem:</label>
+        <textarea name="contato_mensagem" id="contato_mensagem" placeholder="Escreva sua mensagem."></textarea>
+    </p>
+    <p>
+        <label for="contato_enviar"></label>
+        <button type="submit" name="contato_enviar" id="contato_enviar" value="Enviado">Enviar mensagem</button>
+    </p>
+</form>
+
+    </main>
+    <footer></footer>
+
+</div>    
+
+<script>
+/* VALIDANDO FORMULÁRIO DE CONTATOS */
+var form = document.getElementById('contatos');
+
+form.onsubmit = function() {
+
+    // Variável que armazena as mensagens de erro
+    var erro = '';
+    
+    // Variável que contém o feedback do erro
+    var out = '';
+
+    // Validando nome com pelo menos 2 caracteres
+    var nome = document.getElementById('contato_nome');
+    if(nome.value.length < 3){
+        erro += '<li>Seu nome está muito curto.</li>';
+    };
+
+    // Validando email com a presença do '@'
+    var email = document.getElementById('contato_email');
+    if(email.value.indexOf('@') < 0) {
+        erro += '<li>Seu e-mail está inválido.</li>';
+    };
+
+    // Validando assunto com pelo menos 5 caracteres
+    var assunto = document.getElementById('contato_assunto');
+    if(assunto.value.length < 5){
+        erro += '<li>O assunto está muito curto.</li>';
+    };
+
+    // Validando mensagem com pelo menos 5 caracteres
+    var mensagem = document.getElementById('contato_mensagem');
+    if(mensagem.value.length < 5){
+        erro += '<li>A mesagem está muito curta.</li>';
+    };  
+
+    if(erro == ''){
+        return true;    
+    } else {
+        out += '<big><strong>Oooops!</strong></big>';
+        out += '<p>Ocorreram erros que impedem o envio do contato.</p>';
+        out += '<ul>' + erro + '</ul>';
+        out += '<p>Por favor, corrija e tente novamente...</p>';
+        var mensagemErro = document.getElementById('mensagem-erro');
+        mensagemErro.innerHTML = out;
+        mensagemErro.style.display = 'table'; 
+    }
+    return false;
+}
+
+</script>
+</body>
+</html>

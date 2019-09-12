@@ -1,0 +1,55 @@
+/* FOLHAS DE ESTILO DA PÁGINA DE CONTATOS */
+
+#contatos, #contatos label {
+    display: block;
+    width: 100%;
+}
+#contatos label {
+    padding-left: .5rem;
+    font-weight: bold;
+}
+#contatos input, #contatos textarea, #contatos button {
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    padding: .3rem;
+    margin-top: .3rem;
+    border-radius: .2rem;
+    border: 1px solid grey;
+}
+#contatos textarea {
+    height: 6rem;
+}
+#contatos button {
+    background: steelblue;
+    color: white;
+    cursor: pointer;
+    padding: .5rem;
+}
+#contatos button:hover {
+    background: red;
+}
+
+/* CAIXA DE MENSAGENS DE ERRO */
+#errocaixa {
+    display: none;
+    background: #ffc;
+    color: red;
+    padding: 1rem 1rem 0 1rem;
+    border: 2px solid red;
+    border-radius: .3rem;
+    margin: auto;
+    font-size: 90%;
+}
+#errofecha {
+    float: right;
+    margin: -.8rem -.5rem 1rem 1rem;
+    font-size: 1.5rem;
+    color: #444;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}

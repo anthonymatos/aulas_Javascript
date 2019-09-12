@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)http://10.147.45.161/aula04/form02.html -->
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário de Contatos - Site de Exemplo</title>
+    <link rel="stylesheet" href="./Formulário de Contatos - Site de Exemplo_files/global.css">
+    <link rel="stylesheet" href="./Formulário de Contatos - Site de Exemplo_files/contatos.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>HEADER / LOGO</header>
+    <nav>MENU PRINCIPAL</nav>
+    <main>
+
+<!-- Feedback de agradecimento pelo envio -->
+<div id="feedback" class="hidden"></div>
+
+<form action="http://luferat.net/form.php" target="_blank" method="post" name="contatos" id="contatos">
+
+    <h2>Faça contato conosco</h2>
+    <p>Preencha o formulário abaixo para entrar em contato conosco.</p>
+    <p class="text-red text-center"><small>Todos os campos devem ser preenchidos.</small></p>
+
+    <!-- Mensagens de erro -->
+    <div id="errocaixa" style="display: table;">
+        <span id="errofecha">×</span>
+        <div id="erromsg"><big><strong>Oooops!</strong></big><p>Ocorreram erros que impedem o envio do contato.</p><ul><li>Seu nome está muito curto.</li><li>Seu e-mail não é válido.</li><li>O assunto está muito curto.</li><li>A mesagem está muito curta.</li></ul><p>Por favor, corrija e tente novamente...</p></div>
+    </div>
+
+    <p>
+        <label for="contato_nome">Seu nome:</label>
+        <input type="text" name="contato_nome" id="contato_nome" placeholder="Seu nome completo.">
+    </p>
+    <p>
+        <label for="contato_email">Seu e-mail:</label>
+        <input type="text" name="contato_email" id="contato_email" placeholder="Seu endereço de e-mail.">
+    </p>
+    <p>
+        <label for="contato_assunto">Assunto:</label>
+        <input type="text" name="contato_assunto" id="contato_assunto" placeholder="Assunto do contato.">
+    </p>
+    <p>
+        <label for="contato_mensagem">Mensagem:</label>
+        <textarea name="contato_mensagem" id="contato_mensagem" placeholder="Escreva sua mensagem."></textarea>
+    </p>
+    <p>
+        <label for="contato_enviar"></label>
+        <button type="submit" name="contato_enviar" id="contato_enviar" value="Enviado">Enviar mensagem</button>
+    </p>
+</form>
+
+    </main>
+    <footer>RODAPÉ</footer>
+
+</div>    
+
+<script src="./Formulário de Contatos - Site de Exemplo_files/contatos.js.download"></script>
+
+</body></html>

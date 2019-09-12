@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Página de Teste</title>
+	<!-- CSS do Site -->
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			width: 100%;
+			height: 100%;
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	
+<div id="view">O que?</div>
+<button onclick="document.getElementById('view').innerHTML = 'oi'">Clique</button>
+<button onclick="document.write('olá')">Clique2</button>
+<button onclick="console.log('funciona')">Clique console</button>
+<button onclick="console.error('Errou!')">Clique console</button>
+<button onclick="console.info('Informando!')">Clique console</button>
+<button onclick="var casa = 'amarela'; console.log(casa)">Clique variável</button>
+
+<script src="teste.js"></script>			
+</body>
+</html>

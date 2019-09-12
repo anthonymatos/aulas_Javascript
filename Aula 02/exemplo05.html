@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript - Exemplo 5</title>
+</head>
+<body>
+
+<div id="view"></div>    
+
+<script>
+// Array com índice
+var carro = ['azul', 'gasolina', 2019, true];
+console.log(carro[0]);
+console.log(carro[3]);
+
+// Array com vetor    
+var casa = {'cor' : 'amarela', 'num' : 25};
+console.log(casa['cor']);
+console.log(casa.cor);
+
+casa.cor = 'branco';
+console.log(casa.cor);
+
+var div = document.getElementById('view');
+div.innerHTML = casa['cor'] + ' - ' + casa['num'];
+</script>
+    
+</body>
+</html>
