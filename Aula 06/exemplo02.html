@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery - Exemplo 02</title>
+    <style>
+div {
+    padding: 1rem;
+    background: yellowgreen;
+}    
+    </style>
+</head>
+<body>
+
+<div id="view1">
+    <h3>Olá blocos</h3>
+    <p>Blocos, blocos e mais blocos.</p>
+</div>
+
+<button id="btn01">Sumir</button>
+<button id="btn02">Mostrar</button>
+
+<div id="view2"></div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+
+var startApp = function() {
+
+    $('#btn01').click(function() {
+        $('#view1').hide(2000, function(){
+            $('#view2').html('Sumiu');
+        });
+    });
+
+    // $('#btn01').click(function() {
+    //     $('#view1').hide();
+    // });
+
+}
+
+$(document).ready(startApp);
+</script>
+    
+</body>
+</html>
